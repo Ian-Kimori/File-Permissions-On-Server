@@ -17,11 +17,11 @@ This finds all files on the system that have the permission “readable by other
 
 / → scan entire filesystem
 
+-perm -004 → find files readable by “others”
+
 0 → “others”
 
 04 → read permission
-
--perm -004 → find files readable by “others”
 
 -type f → only files
 
@@ -60,16 +60,15 @@ find / -perm -002 -type f 2>/dev/null
 ### Meaning
 This finds all files that are writable by “others.”
 -perm -002 means:
+/ → scan entire system recursively
+
+-perm -002 → find files where others have write permission (o+w)
 
 0 → “others”
 
 02 → write permission
 
-/ → scan entire system recursively
-
--perm -002 → find files where others have write permission (o+w)
-
--type → fonly find files
+-type f → only find files
 
 2>/dev/null → suppress “permission denied” errors
 
