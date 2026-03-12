@@ -15,9 +15,17 @@ find / -perm -004 -type f 2>/dev/null
 This finds all files on the system that have the permission “readable by others”.
 -perm -004 means:
 
+/ → scan entire filesystem
+
 0 → “others”
 
 04 → read permission
+
+-perm -004 → find files readable by “others”
+
+-type f → only files
+
+2>/dev/null → hide permission errors
 
 ### ✔ PASS
 
