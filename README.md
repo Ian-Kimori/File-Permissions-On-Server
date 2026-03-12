@@ -21,6 +21,12 @@ This is the final cheat‑sheet.
 ```bash
 find / -perm -004 -type f 2>/dev/null
 ```
+### Meaning
+This finds all files on the system that have the permission “readable by others”.
+-perm -004 means:
+
+0 → “others”
+04 → read permission
 
 ### ✔ PASS
 
@@ -52,6 +58,12 @@ If you see **ANY** of these in the output:
 ```bash
 find / -perm -002 -type f 2>/dev/null
 ```
+### Meaning
+This finds all files that are writable by “others.”
+-perm -002 means:
+
+0 → “others”
+02 → write permission
 
 ### ✔ PASS
 
@@ -80,6 +92,12 @@ These should **never** be world‑writable.
 ```bash
 find / -type d -perm -007 2>/dev/null
 ```
+### Meaning
+This finds directories where “others” have:
+-perm -007:
+
+0 → “others”
+07 → rwx (read, write, execute)
 
 ### ✔ PASS
 
