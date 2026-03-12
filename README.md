@@ -1,9 +1,5 @@
 # File-Permissions-On-Server
 
-Got you, Ian — here is the **cleanest, simplest, most accurate version** of what you want:
-
-# 🔥 **YES, `find` CAN automatically test ALL of these conditions**
-
 …but **not in one single command**, because each “fail condition” is a *different type of permission problem*.  
 So you use **3 master `find` commands** that cover **100% of all FAIL/PASS cases**.
 
