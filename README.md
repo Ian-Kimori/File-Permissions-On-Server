@@ -157,7 +157,7 @@ These files have weak permissions (644 or worse).
 | ---------------------------------- | --------------------------- | --------------------------- | ------------------------ |
 | **World‑readable sensitive files** | `find / -perm -004 -type f` | No sensitive files found    | Sensitive configs appear |
 | **World‑writable files**           | `find / -perm -002 -type f` | No files                    | ANY files                |
-| **World‑writable directories**     | `find / -type d -perm -007` | Only `/tmp`                 | Any other directory      |
+| **World‑writable directories**     | `find / -perm -007 -type d` | Only `/tmp`                 | Any other directory      |
 | **Backup files**                   | `find / -name "*.bak" ...`  | Not sensitive or restricted | Sensitive + weak perms   |
 | **Config file perms**              | `ls -l /etc/configfiles`    | 600/640/400                 | 644/666                  |
 
