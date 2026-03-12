@@ -65,6 +65,14 @@ This finds all files that are writable by “others.”
 
 02 → write permission
 
+/ → scan entire system recursively
+
+-perm -002 → find files where others have write permission (o+w)
+
+-type → fonly find files
+
+2>/dev/null → suppress “permission denied” errors
+
 ### ✔ PASS
 
 Output is empty
