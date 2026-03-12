@@ -50,7 +50,7 @@ If you see **ANY** of these in the output:
 
 ***
 
-# ✅ **MASTER COMMAND #2 — World‑Writable Files (CRITICAL FAIL)**
+# **MASTER COMMAND #2 — World‑Writable Files (CRITICAL FAIL)**
 
 > **Meaning:** Anyone on system can modify these → RCE or privilege escalation.
 
@@ -124,7 +124,7 @@ These allow attackers to add malicious files.
 
 # **BACKUP COMMANDS — Recommended but not mandatory**
 
-### 🔍 Find backup/original/dev files (potentially sensitive)
+### Find backup/original/dev files (potentially sensitive)
 
 ```bash
 find / -name "*.bak" -o -name "*.old" -o -name "*.orig" -o -name "*.backup" 2>/dev/null
@@ -135,7 +135,7 @@ These files have weak permissions (644 or worse).
 
 ***
 
-# 🟢 **Now here is the FULL PASS/FAIL MAP**
+# **Now here is the FULL PASS/FAIL MAP**
 
 | Test                               | Command                     | PASS                        | FAIL                     |
 | ---------------------------------- | --------------------------- | --------------------------- | ------------------------ |
@@ -169,7 +169,7 @@ ls -l /etc/httpd/conf/httpd.conf
 ls -l /etc/ssh/sshd_config
 ```
 
-# ✅ **1. Linux File Permissions: The Two Formats**
+# **1. Linux File Permissions: The Two Formats**
 
 Linux permissions come in **two formats**:
 
@@ -199,7 +199,7 @@ They represent the **exact same thing**, just in two different notations.
 
 ***
 
-# ✅ **2. How Numeric Permissions Work**
+# **2. How Numeric Permissions Work**
 
 Each permission digit is calculated using:
 
@@ -220,7 +220,7 @@ Examples:
 
 ***
 
-# 🔥 **3. The Three Permission Groups**
+# **3. The Three Permission Groups**
 
 Each file has **3 sets of permissions**:
 
@@ -240,7 +240,7 @@ Example:
 
 ***
 
-# 🔥 **4. How Numeric Maps to Symbolic**
+# **4. How Numeric Maps to Symbolic**
 
 Let’s break each one down clearly.
 
