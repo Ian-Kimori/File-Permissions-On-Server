@@ -1,7 +1,6 @@
 # File-Permissions-On-Server
 
-…but **not in one single command**, because each “fail condition” is a *different type of permission problem*.  
-So you use **3 master `find` commands** that cover **100% of all FAIL/PASS cases**.
+**3 master `find` commands** that cover **100% of all FAIL/PASS cases**.
 
 Below I give you:
 
@@ -14,7 +13,7 @@ This is the final cheat‑sheet.
 
 ***
 
-# ✅ **MASTER COMMAND #1 — World‑Readable Sensitive Files (FAIL Condition)**
+# **MASTER COMMAND #1 — World‑Readable Sensitive Files (FAIL Condition)**
 
 > **Meaning:** These files are readable by *everyone* → secrets can leak.
 
@@ -26,6 +25,7 @@ This finds all files on the system that have the permission “readable by other
 -perm -004 means:
 
 0 → “others”
+
 04 → read permission
 
 ### ✔ PASS
@@ -63,6 +63,7 @@ This finds all files that are writable by “others.”
 -perm -002 means:
 
 0 → “others”
+
 02 → write permission
 
 ### ✔ PASS
@@ -85,7 +86,7 @@ These should **never** be world‑writable.
 
 ***
 
-# ✅ **MASTER COMMAND #3 — World‑Writable Directories (CRITICAL FAIL)**
+# **MASTER COMMAND #3 — World‑Writable Directories (CRITICAL FAIL)**
 
 > **Meaning:** Attackers can upload/replace files.
 
@@ -97,6 +98,7 @@ This finds directories where “others” have:
 -perm -007:
 
 0 → “others”
+
 07 → rwx (read, write, execute)
 
 ### ✔ PASS
@@ -169,12 +171,3 @@ ls -l /etc/ssh/sshd_config
 ```
 
 ***
-
-# 🟦 If you want:
-
-Paste your outputs from the 3 master commands and I will:
-
-✔ Identify dangerous files  
-✔ Classify severity (Low/Medium/High/Critical)  
-✔ Tell you PASS/FAIL  
-✔ Give you the audit wording exactly in your corporate format
