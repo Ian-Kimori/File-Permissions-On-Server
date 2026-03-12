@@ -2,15 +2,6 @@
 
 **3 master `find` commands** that cover **100% of all FAIL/PASS cases**.
 
-Below I give you:
-
-1.  **The exact commands**
-2.  **Why each command is used**
-3.  **What output = FAIL**
-4.  **What output = PASS**
-
-This is the final cheat‑sheet.
-
 ***
 
 # **MASTER COMMAND #1 — World‑Readable Sensitive Files (FAIL Condition)**
