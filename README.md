@@ -60,6 +60,7 @@ find / -perm -002 -type f 2>/dev/null
 ### Meaning
 This finds all files that are writable by “others.”
 -perm -002 means:
+
 / → scan entire system recursively
 
 -perm -002 → find files where others have write permission (o+w)
