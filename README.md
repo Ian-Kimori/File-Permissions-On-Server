@@ -173,7 +173,7 @@ find / -perm -004 -type f 2>/dev/null
 find / -perm -002 -type f 2>/dev/null
 
 # 3. World-writable directories
-find / -type d -perm -007 2>/dev/null
+find / -perm -007 -type d 2>/dev/null
 
 # 4. Backup/dev/original files
 find / -name "*.bak" -o -name "*.old" -o -name "*.orig" -o -name "*.backup" 2>/dev/null
