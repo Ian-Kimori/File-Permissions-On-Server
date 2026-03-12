@@ -15,9 +15,9 @@ find / -perm -004 -type f 2>/dev/null
 This finds all files on the system that have the permission “readable by others”.
 -perm -004 means:
 
-/ → scan entire filesystem
+/ → scan the entire filesystem recursively
 
--perm -004 → find files readable by “others”
+-perm -004 → find files where others have read permission (o+r)
 
 0 → “others”
 
@@ -61,7 +61,7 @@ find / -perm -002 -type f 2>/dev/null
 This finds all files that are writable by “others.”
 -perm -002 means:
 
-/ → scan entire system recursively
+/ → scan the entire filesystem recursively
 
 -perm -002 → find files where others have write permission (o+w)
 
@@ -69,7 +69,7 @@ This finds all files that are writable by “others.”
 
 02 → write permission
 
--type f → only find files
+-type f → only files
 
 2>/dev/null → suppress “permission denied” errors
 
@@ -104,7 +104,7 @@ find / -perm -007 -type d 2>/dev/null
 This finds directories where “others” have:
 -perm -007:
 
-/ → scan entire filesystem
+/ → scan the entire filesystem recursively
 
 -perm -007 → find directories where others have rwx (o+rwx) — meaning permission 7
 
@@ -112,7 +112,7 @@ This finds directories where “others” have:
 
 07 → rwx (read, write, execute) permission
 
--type d → only search directories
+-type d → only directories
 
 2>/dev/null → hide permission errors
 
