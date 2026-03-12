@@ -114,7 +114,7 @@ These allow attackers to add malicious files.
 
 ***
 
-# 🔥 **BONUS COMMANDS — Recommended but not mandatory**
+# **BACKUP COMMANDS — Recommended but not mandatory**
 
 ### 🔍 Find backup/original/dev files (potentially sensitive)
 
