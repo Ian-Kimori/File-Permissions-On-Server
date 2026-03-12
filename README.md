@@ -71,7 +71,7 @@ This finds all files that are writable by “others.”
 
 -type f → only files
 
-2>/dev/null → suppress “permission denied” errors
+2>/dev/null → hide permission errors
 
 ### ✔ PASS
 
