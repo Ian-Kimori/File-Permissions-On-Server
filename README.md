@@ -98,15 +98,23 @@ These should **never** be world‑writable.
 > **Meaning:** Attackers can upload/replace files.
 
 ```bash
-find / -type d -perm -007 2>/dev/null
+find / -perm -007 -type d 2>/dev/null
 ```
 ### Meaning
 This finds directories where “others” have:
 -perm -007:
 
+/ → scan entire filesystem
+
+-perm -007 → find directories where others have rwx (o+rwx) — meaning permission 7
+
 0 → “others”
 
-07 → rwx (read, write, execute)
+07 → rwx (read, write, execute) permission
+
+-type d → only search directories
+
+2>/dev/null → hide permission errors
 
 ### ✔ PASS
 
